@@ -1,0 +1,100 @@
+.row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 10px;
+    max-width: min(78%, 520px);
+    width: fit-content;
+}
+
+.theirs {
+    align-self: flex-start;
+}
+
+.mine {
+    align-self: flex-end;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+}
+
+.bubbleWrap {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.mine .bubbleWrap {
+    align-items: flex-end;
+}
+
+.bubble {
+    padding: 9px 13px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.45;
+    word-break: break-word;
+}
+
+.theirs .bubble {
+    background: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #e8e8e8;
+    border-bottom-left-radius: 6px;
+}
+
+.mine .bubble {
+    background: #1a237e;
+    color: #ffffff;
+    border-bottom-right-radius: 6px;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 4px;
+    margin-top: 4px;
+}
+
+.mine .meta {
+    justify-content: flex-end;
+}
+
+.time {
+    font-size: 11px;
+    color: #999999;
+}
+
+.seen {
+    display: flex;
+    align-items: center;
+}
+
+.seenAvatar {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+.delivered {
+    font-size: 11px;
+    color: #999999;
+}
+
+@media (max-width: 767px) {
+    .row {
+        max-width: 88%;
+    }
+}

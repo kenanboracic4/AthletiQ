@@ -1,0 +1,133 @@
+.header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #ffffff;
+}
+
+.backBtn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.backBtn:hover {
+    background: #f7f7f7;
+}
+
+.userLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+    text-decoration: none;
+    color: inherit;
+}
+
+.userLink:hover .name {
+    color: #1a237e;
+}
+
+.avatarWrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+}
+
+.onlineDot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.15s;
+}
+
+.status {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 1px;
+}
+
+.adLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    color: #444444;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    flex-shrink: 0;
+    max-width: 180px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.adLink:hover {
+    background: #f3f2ef;
+    border-color: #cccccc;
+    color: #111111;
+}
+
+.adLinkText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+    .backBtn {
+        display: inline-flex;
+    }
+
+    .header {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .adLink {
+        max-width: 110px;
+        padding: 6px 8px;
+    }
+}

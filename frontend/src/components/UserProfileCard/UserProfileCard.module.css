@@ -1,0 +1,865 @@
+
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    color: #1a1a1a;
+}
+
+.banner {
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bannerImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannerOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.28) 100%);
+    pointer-events: none;
+}
+
+.bannerGrid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255, 255, 255, 0.06) 39px, rgba(255, 255, 255, 0.06) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255, 255, 255, 0.06) 39px, rgba(255, 255, 255, 0.06) 40px);
+    pointer-events: none;
+}
+
+.bannerEditBtn {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background: rgba(0, 0, 0, 0.42);
+    backdrop-filter: blur(6px);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+.bannerEditBtn:hover {
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.bannerEditBtnBusy {
+    opacity: 0.75;
+    cursor: wait;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.roleName {
+    font-size: 13px;
+    color: #5b5959;
+
+}
+
+.privateBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 8px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: #f1eff4;
+    color: #555;
+    font-size: 11px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.privacyRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    background: #fafafa;
+    margin-bottom: 16px;
+}
+
+.privacyInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.privacyIcon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--brand-soft);
+    color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.privacyTitle {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.privacyHint {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    border: none;
+    background: #cfcfcf;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.toggleOn {
+    background: var(--brand);
+}
+
+.toggleKnob {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s ease;
+}
+
+.toggleOn .toggleKnob {
+    transform: translateX(20px);
+}
+
+.roleBadge {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.body {
+    padding: 0 24px 22px;
+}
+
+.avatarRow {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: -54px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.avatar {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+    font-weight: 700;
+    color: #4b6a88;
+    letter-spacing: -1px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    object-fit: cover;
+    display: block
+}
+
+.onlineDot {
+    position: absolute;
+    bottom: 7px;
+    right: 7px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #57c75a;
+    border: 2.5px solid #ffffff;
+}
+
+.nameActionsRow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+    object-fit: cover;
+
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-bottom: 4px;
+}
+
+.btnPrimary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 18px;
+    background: var(--brand);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btnPrimary:hover {
+    background: var(--brand-hover);
+}
+
+.btnOutline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 18px;
+    background: #ffffff;
+    color: var(--brand);
+    border: 1.5px solid var(--brand);
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btnOutline:hover {
+    background: #ebf3fb;
+}
+
+.btnMore {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid #666;
+    background: #ffffff;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btnMore:hover {
+    background: #f3f2ef;
+}
+
+.nameLine {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111111;
+    letter-spacing: -0.2px;
+}
+
+.verifiedIcon {
+    color: var(--brand);
+    flex-shrink: 0;
+}
+
+.degree {
+    font-size: 13px;
+    color: #666;
+    background: #f3f2ef;
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    font-weight: 400;
+}
+
+.headline {
+    font-size: 14px;
+    color: #000000;
+    line-height: 1.55;
+    margin-bottom: 2px;
+}
+
+.nickname {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.locationRow {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #666666;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.separator {
+    color: #ccc;
+}
+
+.contactLink {
+    color: var(--brand);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+.detailPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: var(--brand-soft);
+    border: 1px solid var(--brand-soft-border);
+    border-radius: 12px;
+    font-size: 12.5px;
+    color: var(--brand);
+    font-weight: 600;
+}
+
+.mutual {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.mutualAvatars {
+    display: flex;
+}
+
+.mutualAv {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #dde3ea;
+    border: 2px solid #ffffff;
+    font-size: 8px;
+    font-weight: 700;
+    color: #4b6a88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -7px;
+}
+
+.mutualAv:last-child {
+    margin-right: 0;
+}
+
+.mutualText {
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.philosophyBox {
+    background: #f0f4ff;
+    border: 1px solid #bfcfea;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 6px;
+}
+
+.philosophyTitle {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.philosophyDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--brand);
+    flex-shrink: 0;
+}
+
+.philosophyText {
+    font-size: 13px;
+    color: #444;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.hiringBox {
+    background: #faf8f0;
+    border: 1px solid #e2d69e;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-top: 6px;
+}
+
+.hiringTitle {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.hiringDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ca9a04;
+    flex-shrink: 0;
+}
+
+.hiringDesc {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.hiringLink {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    text-decoration: none;
+}
+
+.hiringLink:hover {
+    text-decoration: underline;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modalBig {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    max-width: 480px;
+    color: #1a1a1a;
+    color-scheme: light;
+    overflow: hidden;
+}
+
+.modalHeader {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modalTitle {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+}
+
+.modalClose {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 24px;
+    line-height: 1;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.modalClose:hover {
+    background: #f3f2ef;
+}
+
+.modalBody {
+    padding: 24px;
+}
+
+.modalFooter {
+    padding: 16px 24px;
+    border-top: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.fieldGroup {
+    margin-bottom: 18px;
+}
+
+.fieldLabel {
+    display: block;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.fieldInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #ffffff;
+    color: #111111;
+    color-scheme: light;
+    -webkit-text-fill-color: #111111;
+    font-family: inherit;
+    outline: none;
+}
+
+.fieldInput::placeholder {
+    color: #888888;
+    -webkit-text-fill-color: #888888;
+}
+
+.fieldInput:focus {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.12);
+}
+
+.fieldInput:disabled {
+    background: #f3f2ef;
+    color: #888;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+.btnCancel {
+    padding: 7px 18px;
+    border: 1.5px solid #666;
+    border-radius: 16px;
+    background: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+}
+
+.btnCancel:hover {
+    background: #f3f2ef;
+}
+
+.btnSave {
+    padding: 7px 20px;
+    background: var(--brand);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btnSave:hover {
+    background: var(--brand-hover);
+}
+
+.modalBody {
+    padding: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.avatarUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0 8px;
+}
+
+.coverUpload {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.coverPreview {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+.coverPreviewImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coverOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.coverPreview:hover .coverOverlay {
+    opacity: 1;
+}
+
+.coverFileName {
+    font-size: 11px;
+    color: #666666;
+}
+
+.avatarPreview {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid var(--border);
+}
+
+.avatarPreviewImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.avatarPreviewInitials {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface-2);
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.avatarOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.avatarPreview:hover .avatarOverlay {
+    opacity: 1;
+}
+
+.avatarFileName {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.statsBar {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 12px;
+    margin-top: 10px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 6px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.12s;
+}
+
+.statItem:hover {
+    background: #f5f5f5;
+}
+
+.statItem+.statItem {
+    border-left: 1px solid #f0f0f0;
+}
+
+.statNumber {
+    font-size: 17px;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.statLabel {
+    font-size: 11px;
+    color: #888;
+    margin-top: 1px;
+}
+
+@media (max-width: 768px) {
+    .body {
+        padding: 0 16px 20px;
+    }
+
+    .nameActionsRow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .actions {
+        width: 100%;
+    }
+
+    .btnPrimary,
+    .btnOutline {
+        flex: 1;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .banner {
+        height: 130px;
+    }
+
+    .avatarRow {
+        margin-top: -48px;
+    }
+
+    .avatar {
+        width: 88px;
+        height: 88px;
+    }
+
+    .modalBig {
+        max-width: calc(100vw - 20px);
+    }
+
+    .modalBody,
+    .modalFooter {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 19px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btnPrimary,
+    .btnOutline,
+    .btnMore {
+        width: 100%;
+    }
+}

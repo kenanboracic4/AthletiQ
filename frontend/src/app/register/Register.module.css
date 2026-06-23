@@ -1,0 +1,246 @@
+.logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand);
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+    text-align: center;
+    width: 100%;
+}
+
+.subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9e9e9e;
+    margin-bottom: 28px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    width: 100%;
+}
+
+.stepIndicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.stepDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.stepDotActive {
+    background: var(--brand);
+    transform: scale(1.2);
+}
+
+.stepDotDone {
+    background: #5c6bc0;
+}
+
+.stepConnector {
+    width: 28px;
+    height: 2px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    transition: background 0.3s;
+}
+
+.stepConnectorDone {
+    background: #5c6bc0;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.stepTitle {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--brand);
+    margin-bottom: 4px;
+    text-align: left;
+    width: 100%;
+}
+
+.fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand);
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f5f5f7;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--brand);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+}
+
+.input::placeholder {
+    color: #bdbdbd;
+    font-weight: 500;
+}
+
+.input:focus {
+    border-color: var(--brand);
+    background: #ffffff;
+}
+
+.select {
+    width: 100%;
+    padding: 12px 36px 12px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    background: #f5f5f7;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--brand);
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231a237e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+}
+
+.select:focus {
+    border-color: var(--brand);
+    background-color: #ffffff;
+}
+
+.select option {
+    color: var(--brand);
+    font-weight: 600;
+}
+
+.error {
+    font-size: 11px;
+    color: #e53935;
+    font-weight: 600;
+    padding-left: 2px;
+}
+
+.btnRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.btnBack {
+    flex: 1;
+    padding: 13px;
+    background: transparent;
+    color: var(--brand);
+    border: 1.5px solid var(--brand);
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btnBack:hover {
+    background: var(--brand);
+    color: #ffffff;
+}
+
+.btnNext {
+    flex: 2;
+    padding: 13px;
+    background: var(--brand);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btnNext:hover {
+    background: var(--brand-hover);
+}
+
+.btnNext:active {
+    transform: scale(0.98);
+}
+
+.btnSubmit {
+    width: 100%;
+    padding: 14px;
+    background: var(--brand);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 6px;
+}
+
+.btnSubmit:hover:not(:disabled) {
+    background: var(--brand-hover);
+}
+
+.btnSubmit:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.btnSubmit:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .logo {
+        display: none;
+    }
+
+    .subtitle {
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtitle {
+        margin-bottom: 18px;
+    }
+}

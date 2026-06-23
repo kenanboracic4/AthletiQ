@@ -1,0 +1,80 @@
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111318;
+    transition: background 0.12s;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: #f3f4f6;
+}
+
+.item.active {
+    background: #f3f4f6;
+}
+
+.profileItem {
+    margin-bottom: 4px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.avatarFallback {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.iconWrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: transparent;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.item.active .iconWrap {
+    background: #d1d5db;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111318;
+    line-height: 1;
+}
+
+.divider {
+    height: 1px;
+    background: #f3f4f6;
+    margin: 4px 0;
+}

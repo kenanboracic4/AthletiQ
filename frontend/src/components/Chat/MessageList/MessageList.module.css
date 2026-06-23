@@ -1,0 +1,43 @@
+.area {
+    width: 100%;
+    margin-top: auto;
+    padding: 16px 18px 12px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dayDivider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0 16px;
+    color: #888888;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dayDivider::before,
+.dayDivider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e8e8e8;
+}
+
+.dayDivider span {
+    flex-shrink: 0;
+    padding: 0 4px;
+}
+
+@media (max-width: 767px) {
+    .area {
+        padding: 12px 12px 10px;
+    }
+}

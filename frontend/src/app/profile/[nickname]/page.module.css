@@ -1,0 +1,363 @@
+
+
+.lockedNotice {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 48px 24px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.lockedIcon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.lockedTitle {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.lockedText {
+    margin: 0 auto;
+    max-width: 360px;
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.page {
+    min-height: 100vh;
+    background: #F3F2EF;
+    padding: 24px 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.layout {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+}
+
+@media (max-width: 760px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: -1;
+    }
+
+    .page {
+        padding: 16px 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 12px 10px 16px;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: sticky;
+    top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+.section {
+    padding: 20px 24px;
+}
+
+.sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.aboutText {
+    font-size: 14px;
+    color: #000;
+    line-height: 1.65;
+}
+
+.showMore {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    cursor: pointer;
+    padding: 4px 0 0;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.skillsBox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 10px 12px;
+    background: #f9fafb;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.skillsBox:hover {
+    border-color: var(--brand);
+}
+
+.skillsIcon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.skillsContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.skillsLabel {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.skillsList {
+    color: #444;
+    margin-top: 2px;
+}
+
+.skillsArrow {
+    font-size: 22px;
+    color: #666;
+}
+
+.activityHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.followers {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.followBtn {
+    padding: 5px 14px;
+    background: #ffffff;
+    border: 1.5px solid var(--brand);
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.followBtn:hover {
+    background: #ebf3fb;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tab {
+    padding: 5px 14px;
+    border-radius: 14px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    font-weight: 500;
+    background: #ffffff;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.tab:hover {
+    background: #f3f2ef;
+}
+
+.tabActive {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.tabActive:hover {
+    background: #000;
+}
+
+.postsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+@media (max-width: 500px) {
+    .postsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.postCard {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+}
+
+.postCard:hover {
+    border-color: var(--brand);
+}
+
+.postTop {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.postAv {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #dde3ea;
+    font-size: 11px;
+    font-weight: 700;
+    color: #4b6a88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.postMeta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.postAuthor {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #000;
+}
+
+.postRole {
+    font-size: 11px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.postTime {
+    font-size: 11px;
+    color: #999;
+}
+
+.postText {
+    font-size: 12.5px;
+    color: #333;
+    line-height: 1.55;
+}
+
+.careerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.careerItem {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.careerItem:last-child {
+    border-bottom: none;
+}
+
+.careerLogo {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    background: #f3f2ef;
+    font-size: 10px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+    text-align: center;
+}
+
+.careerInfo {
+    flex: 1;
+}
+
+.careerTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+}
+
+.careerClub {
+    font-size: 13.5px;
+    color: #000;
+    margin-top: 1px;
+}
+
+.careerYears {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.careerDesc {
+    font-size: 12.5px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 6px;
+}

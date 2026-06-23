@@ -1,0 +1,173 @@
+
+
+.widget {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 16px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: flex-start;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.avatarImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.info {
+    flex: 1;
+    min-width: 0;
+}
+
+.nameLine {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sub {
+    font-size: 12px;
+    color: #444;
+    margin: 2px 0 6px;
+    line-height: 1.4;
+}
+
+.msgBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border: 1.5px solid #666;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    background: var(--brand);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.msgBtn:hover {
+    background: var(--brand-hover);
+}
+
+.msgBtnActive {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border: 1.5px solid #666;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--brand);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.msgBtnActive:hover {
+    background: var(--brand);
+    color: white;
+}
+
+.empty {
+    font-size: 12.5px;
+    color: #666;
+    padding: 4px 0 8px;
+}
+
+.showAll {
+    width: 100%;
+    padding: 10px 0 2px;
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 4px;
+    transition: color 0.15s;
+    text-decoration: none;
+}
+
+.showAll:hover {
+    color: #000;
+}
+
+.avatarSkeleton {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--skeleton-bg, #e5e7eb);
+    flex-shrink: 0;
+    animation: shimmer 1.4s infinite;
+}
+
+.skeletonLine {
+    background: var(--skeleton-bg, #e5e7eb);
+    border-radius: 4px;
+    animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}

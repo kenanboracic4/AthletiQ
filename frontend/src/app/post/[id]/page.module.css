@@ -1,0 +1,21 @@
+.backBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: color 0.15s;
+}
+
+.backBtn:hover {
+    color: #111;
+}
+
+@media (max-width: 600px) {
+    .backBtn {
+        font-size: 0.85rem;
+    }
+}
